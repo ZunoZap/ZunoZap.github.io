@@ -8,12 +8,24 @@
 .neverout { background-color: gray; }
 .l { background-color: green; }
 .stable { background-color: blue; }
-    button, .googlebutton, .textarea {
+    button, .googlebutton {
         color: white;
         background-color: transparent;
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
         border-radius: 20px;
+        padding: 12px 30px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .textarea {
+        color: white;
+        background-color: transparent;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border-radius: 20px;
+        border-width: 6px;
         padding: 12px 30px;
         margin-left: 5px;
         margin-bottom: 5px;
@@ -27,7 +39,7 @@
     
     .thegooglebutton {
     	background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png);
-    	background-repeat: none;
+    	background-repeat: no-repeat;
     }
     
 /*END*/
