@@ -8,7 +8,7 @@
 .neverout { background-color: gray; }
 .l { background-color: green; }
 .stable { background-color: blue; }
-    button, .googlebutton {
+    button, .googlebutton, .textarea {
         color: white;
         background-color: transparent;
         -webkit-transition-duration: 0.4s; /* Safari */
