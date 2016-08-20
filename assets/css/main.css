@@ -26,7 +26,7 @@
     }
     
     .thegooglebutton {
-    	background-image: "https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png";
+    	background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png);
     	background-repeat: none;
     }
     
