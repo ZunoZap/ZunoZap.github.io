@@ -38,7 +38,7 @@
     }
     
     .thegooglebutton {
-    	background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png);
+    	background-image: url(http://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png);
     	background-repeat: no-repeat;
     }
     
@@ -160,6 +160,7 @@ a:after {
 	font-size: 45px;
 	font-weight: 100;
 	letter-spacing: 2px;
+	margin-bottom: 10;
 }
 
 /* Portfolio Wrap */
