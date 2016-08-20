@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <script>
 function downloads() {
+
+        downloadLatest("0.0.5");
+        newLine(); newLine();
         downloadButton("0.0.5", "l");
         downloadButton("0.0.4", "stable");
-        downloadButton("0.0.3", "unstable");
+        downloadButton("0.0.3", "outdated");
+        newLine();
+        downloadButton("0.0.2", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-06", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-05", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-04", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-03", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-02", "unstable", false);
+        downloadButton("0.0.1-SNAPSHOT-01", "neverout", false);
+        downloadButton("0.0.1-SNAPSHOT-00", "neverout", false);
 }
 </script>
 
@@ -197,14 +209,22 @@ function downloads() {
 	<section id="download" name="download"></section>
 	<div id="portfoliowrap">
         <script>
-        function downloadButton(version, type) {
+        function downloadButton(version, type, hasExeFile) {
             if (version == ("1.0.0")) {
                 displayVersion = "1.0";
+            } else if (version.includes("SNAPSHOT")) {
+                displayVersion = version.replace("SNAPSHOT-0", "DB-");
+                displayVersion = displayVersion.replace("Jar", "");
             } else { displayVersion = version }
-            document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.exe?raw=true"><button class="exe '+type+'">v'+displayVersion+' Exe</button></a>');
-            document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.jar?raw=true"><button class="jar '+type+'">v'+displayVersion+' Jar</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+            if (hasExeFile == true || hasExeFile == null) {
+                document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.exe?raw=true"><button class="exe '+type+'">v'+displayVersion+' Exe</button></a>');
+                document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.jar?raw=true"><button class="jar '+type+'">v'+displayVersion+' Jar</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+            } else {
+                document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.jar?raw=true"><button class="jar '+type+'">v'+displayVersion+' Jar</button></a>&nbsp;&nbsp;&nbsp;&nbsp;');
+            }
         }
-    
+        function downloadLatest(version) { document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.exe?raw=true"><button class="exe">Download latest ('+version+') Exe</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'); document.write('<a href="http://github.com/ZunoZap/zunozap/blob/master/builds/ZunoZap-'+version+'.jar?raw=true"><button class="jar">Download latest ('+version+') Jar</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');}
+        function newLine() {document.write("<br>")}
     </script>
 		<div class="container">
 			<div class="row">
@@ -212,9 +232,11 @@ function downloads() {
 				<br>
 				<br>
 				<!--div class="col-lg-4 port-space">-->
+                <CENTER>
                     <script>
                     downloads();
                     </script>
+                </CENTER>
 				<!--</div>-->				
 			</div>	
 		</div><!-- /container -->
