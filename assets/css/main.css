@@ -21,7 +21,7 @@
     
     .textarea {
         color: white;
-        background-color: transparent gray;
+        background-color: #4CAF50;
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
         border-radius: 20px;
