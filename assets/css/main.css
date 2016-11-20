@@ -1,4 +1,9 @@
 /*I've added this part, START*/
+ td del, span.red { color: red; }
+    table { font-family: arial, sans-serif; border-collapse: collapse; width: 50%; }
+    td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+    tr:nth-child(even) { background-color: #dddddd; }
+
 .exe {background-image: url(http://downloadicons.net/sites/default/files/exe-file-icon-40624.png);
     background-repeat: no-repeat;}
 .jar {background-image: url(http://icons.iconarchive.com/icons/fatcow/farm-fresh/32/file-extension-jar-icon.png);
