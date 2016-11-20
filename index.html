@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<style>
-    td del, span.red { color: red; }
-    table { font-family: arial, sans-serif; border-collapse: collapse; width: 50%; }
-    td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
-    tr:nth-child(even) { background-color: #dddddd; }
-</style>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -50,7 +44,7 @@
 			<i class="icon-remove menu-close"></i>
 			<a href="#home" class="smoothScroll">Home</a>
 			<a href="#services" class="smoothScroll">Services</a>
-			<a href="#download" class="smoothScroll">Download</a>
+			<a href="/download" class="smoothScroll">Download</a>
 			<a href="#about" class="smoothScroll">About</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
 			<a href="#"><i class="icon-facebook"></i></a>
@@ -77,7 +71,7 @@
 			<br>
 			<h2>OpenSource, HTML5 compatable, Java Web browser!</h2>
 			<p>
-            			<a href="#download"><button>Downloads</button></a>
+            			<a href="/download"><button>Downloads</button></a>
             		</p>
             		<br>
 		</div><!-- /container -->
@@ -132,36 +126,6 @@
     <section id="portfolio" name="portfolio"></section>
 	<section id="download" name="download"></section>
 	<div id="portfoliowrap">
-        <script>
-		//add("0.1.0", "Beta");
-		add("<span class='red'>0.0.6 - 0.0.9</span>", "Unreleased");
-		add("0.0.5", "Alpha");
-		add("0.0.4", "Alpha");
-		add("0.0.3", "Alpha");
-		add("0.0.2", "Alpha");
-		add("0.0.1-SNAPSHOT-06", "Alpha");
-		add("0.0.1-SNAPSHOT-05", "Alpha");
-		add("0.0.1-SNAPSHOT-04", "Alpha");
-		add("MiniBrowser", "Pre-Alpha");
-
-		function add(cOne, celltwo) {
-    			var buildFile = "https://github.com/ZunoZap/zunozap/raw/master/builds/ZunoZap-";
-
-    			var table = document.getElementById("myTable");
-   			var row = table.insertRow(-1);
-   			var cell1 = row.insertCell(0);
-    			var cell2 = row.insertCell(1);
-    			var cell3 = row.insertCell(2);
-    			cell1.innerHTML = cOne.replace("-SNAPSHOT-0", "_");;
-    			cell3.innerHTML = celltwo;
-
-    			if (!cOne.includes("<del>") && !cOne.includes("<span class='red'>")){
-       				cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
-    			} else {
-       				cell2.innerHTML = "N/A";
-    			}
-		}
-		</script>
 		<div class="container">
 			<div class="row">
 				<h3> DOWNLOADS </h3>
@@ -169,9 +133,7 @@
 				<br>
 				<!--div class="col-lg-4 port-space">-->
                 		<CENTER>
-                		   <script>
-                			 downloads();
-                		  </script>
+					<a href="/download">Click here to view downloads!</a>
         			 </CENTER>
 				<!--</div>-->				
 			</div>	
