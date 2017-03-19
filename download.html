@@ -20,16 +20,12 @@ tr:nth-child(even) { background-color: #dddddd; }
 <br>
 
 <script>
-//Coming Soon: add("0.1.0", "Beta");
-add("<span class='red'>0.0.6 - 0.0.9</span>", "Unreleased");
+add("0.1.0", "Beta");
 add("0.0.5", "Alpha");
 add("0.0.4", "Alpha");
 add("0.0.3", "Alpha");
 add("0.0.2", "Alpha");
 add("0.0.1-SNAPSHOT-06", "Alpha");
-add("0.0.1-SNAPSHOT-05", "Alpha");
-add("0.0.1-SNAPSHOT-04", "Alpha");
-add("MiniBrowser", "Pre-Alpha");
 
 function add(cOne, celltwo) {
     var buildFile = "https://github.com/ZunoZap/zunozap/raw/master/builds/ZunoZap-";
@@ -42,11 +38,7 @@ function add(cOne, celltwo) {
     cell1.innerHTML = cOne.replace("-SNAPSHOT-0", "_");
     cell3.innerHTML = celltwo;
 
-    if (!cOne.includes("<del>") && !cOne.includes("<span class='red'>")){
-        cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
-    } else {
-        cell2.innerHTML = "N/A";
-    }
+    cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
 }
 </script>
 
