@@ -3,12 +3,32 @@
 <head>
 <style>
 td del, span.red { color: red; }
-table { font-family: arial, sans-serif; border-collapse: collapse; width: 50%; }
-td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+table { font-family: arial, sans-serif; border-collapse: collapse; width: 15%; font-size: 12px; }
+td, th { border: 1px solid #dddddd; text-align: left; padding: 7px; }
 tr:nth-child(even) { background-color: #dddddd; }
+p { margin-bottom: 10%; }
 </style>
 </head>
 <body>
+<script>
+if (window.navigator.userAgent.indexOf("Windows NT")!= -1) {
+    document.write("<h2>Click <a href='launcher/ZunoZap.exe'>here</a> to download. ZunoZap for your platform!</h2>");
+} else {
+    document.write("<h2>Click <a href='launcher/ZunoZap.jar'>here</a> to download. ZunoZap for your platform!</h2>");
+}
+</script>
+<p><b>ZunoZap will auto-update so you won't have to keep redownloading!</b></p>
+
+<hr>
+<br>
+Alt downloads:
+<a href="launcher/ZunoZap.exe">[ZunoZap.exe]</a>
+<a href="launcher/ZunoZap.jar">[ZunoZap.jar]</a>
+(will auto update).
+<br>
+<br>
+Other downloads:
+(they don't auto update)
 
 <table id="myTable">
   <tr>
@@ -17,39 +37,28 @@ tr:nth-child(even) { background-color: #dddddd; }
     <th>Status</th>
   </tr>
 </table>
-<br>
-
 <script>
-//Coming Soon: add("0.1.0", "Beta");
-add("<span class='red'>0.0.6 - 0.0.9</span>", "Unreleased");
+add("0.3.0", "Beta");
+add("0.2.0", "Beta");
+add("0.1.0", "Beta");
 add("0.0.5", "Alpha");
 add("0.0.4", "Alpha");
 add("0.0.3", "Alpha");
 add("0.0.2", "Alpha");
 add("0.0.1-SNAPSHOT-06", "Alpha");
-add("0.0.1-SNAPSHOT-05", "Alpha");
-add("0.0.1-SNAPSHOT-04", "Alpha");
-add("MiniBrowser", "Pre-Alpha");
 
 function add(cOne, celltwo) {
     var buildFile = "https://github.com/ZunoZap/zunozap/raw/master/builds/ZunoZap-";
-
     var table = document.getElementById("myTable");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    cell1.innerHTML = cOne.replace("-SNAPSHOT-0", "_");
+    cell1.innerHTML = cOne.replace("-SNAPSHOT-06", "");
     cell3.innerHTML = celltwo;
-
-    if (!cOne.includes("<del>") && !cOne.includes("<span class='red'>")){
-        cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
-    } else {
-        cell2.innerHTML = "N/A";
-    }
+    cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
 }
 </script>
-
 </body>
 </html>
 
