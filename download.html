@@ -38,6 +38,8 @@ Other downloads:
   </tr>
 </table>
 <script>
+add("0.3.2", "Beta");
+add("0.3.1", "Beta");
 add("0.3.0", "Beta");
 add("0.2.0", "Beta");
 add("0.1.0", "Beta");
@@ -56,7 +58,7 @@ function add(cOne, celltwo) {
     var cell3 = row.insertCell(2);
     cell1.innerHTML = cOne.replace("-SNAPSHOT-06", "");
     cell3.innerHTML = celltwo;
-    cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>JAR</a>&nbsp;/&nbsp;<a href='"+buildFile+cOne+".exe'>EXE</a>";
+    cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>Download</a>";
 }
 </script>
 </body>
