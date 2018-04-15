@@ -1,71 +1,34 @@
-<!DOCTYPE html>
 <html>
-<head>
-<style>
-td del, span.red { color: red; }
-table { font-family: arial, sans-serif; border-collapse: collapse; width: 15%; font-size: 12px; }
-td, th { border: 1px solid #dddddd; text-align: left; padding: 7px; }
-tr:nth-child(even) { background-color: #dddddd; }
-p { margin-bottom: 10%; }
-</style>
-</head>
-<body>
-<script>
-window.location.href = "https://zunozap.weebly.com/download"
-    //if (window.navigator.userAgent.indexOf("Windows NT")!= -1) {
-//    document.write("<h2>Click <a href='launcher/ZunoZap.exe'>here</a> to download. ZunoZap for your platform!</h2>");
-//}https://github.com/ZunoZap/ZunoZap.github.io/tree/master/launcher else {
-    document.write("<h2>Click <a href='https://zunozap.weebly.com/download/'>here</a> to download ZunoZap</h2>");
-//}
-</script>
-<p><b>ZunoZap will auto-update so you won't have to keep redownloading!</b></p>
-
-<hr>
-<br>
-Alt downloads:
-<!--<a href="launcher/ZunoZap.exe">[ZunoZap.exe]</a>-->
-<a href="launcher/ZunoZap.jar">[ZunoZap.jar]</a>
-(will auto update).
-<br>
-<br>
-Other downloads:
-(they don't auto update)
-
-<table id="myTable">
-  <tr>
-    <th>Version</th>
-    <th>File</th>
-    <th>Status</th>
-  </tr>
-</table>
-<script>
-add("0.5.1", "Beta")
-add("0.4.0", "Beta");
-add("0.3.5", "Beta");
-add("0.3.4", "Beta");
-//add("0.3.3", "Beta");
-//add("0.3.2", "Beta");
-//add("0.3.1", "Beta");
-//add("0.3.0", "Beta");
-add("0.2.0", "Beta");
-add("0.1.0", "Beta");
-add("0.0.5", "Alpha");
-//add("0.0.4", "Alpha");
-//add("0.0.3", "Alpha");
-//add("0.0.2", "Alpha");
-
-function add(cOne, celltwo) {
-    var buildFile = "https://github.com/ZunoZap/zunozap/raw/master/builds/ZunoZap-";
-    var table = document.getElementById("myTable");
-    var row = table.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    cell1.innerHTML = cOne;
-    cell3.innerHTML = celltwo;
-    cell2.innerHTML = "<a href='"+buildFile+cOne+".jar'>Download</a>";
-}
-</script>
-</body>
+<div class="b">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <h2 class="name">ZUNOZAP</h2>
+    <ul>
+        <li><a href="https://isaiahpatton.blogspot.com/search?q=zunozap">News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#" class="active">Download</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <div class="main">
+        <h1 class="fast center" style="font-size:70px;">BROWSE FASTER</h1>
+        <table>
+            <tr>
+                <td class="center">
+                    <h4>70% lighter than Google Chrome.</h4>
+                    <h4>25% lighter than Firefox Quantum.</h4>
+                    <img src="capture.png">
+                </td>
+                <td class="center">
+                    <a href="https://github.com/zunozap/zunozap/releases/download/0.5.1/ZunoZapSetup.exe"><button class="center">Download ZunoZap Installer <small>(.exe)</small></button></a><br><br>
+                    <a href="launcher/zunozap.jar"><button class="altbtn center">Alternate Download <small>(.jar)</small></button></a>
+                </td>
+                <td class="center">
+                <iframe width="300" height="215" src="https://www.youtube.com/embed/oqsROZLOHCc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="bottom">
+        
+    </div>
+    </div>
 </html>
-
