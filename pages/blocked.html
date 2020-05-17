@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>ZunoZap Safe Browsing</title>
+        <style>
+            html{background:rgb(100,10,10);font-family:sans-serif;height:100vh;}
+            #box{background-color:rgb(10,0,0);max-width:80%;margin:25px auto 0px auto;padding:80px 40px 100px 40px;}
+            h1{color:white;font-size:300%;text-align:center;}
+            p{margin-left:30px;font-size:1.25em;text-align:center;color:white;}
+            button{padding:12px 42px 12px 42px;}
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <h1>WARNING</h1><br>
+            <p><script>document.write("The site at <b>" + window.location.href.split("?")[1] + "</b>")</script> has been reported to ZunoZap for <b>Malware</b><br>This site will most likely give your computer <b>Malware</b></p><br>
+            <p>Malware is malicious software that can cause harm to your computer.<br>It is recommended to not visit this site.<br><br><br><br><button onclick="window.history.back()" style="text-align:center">Go Back</button></p>
+        </div>
+    </body>
+</html>
